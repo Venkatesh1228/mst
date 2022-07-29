@@ -1,0 +1,30 @@
+<html>
+<head>
+
+<script>
+	available=30;
+	book=parseInt(window.prompt("enter no.of tickets","1"));
+	if(book>5 && book>available)
+	{
+		window.alert("only 5 tickets can be booked at a time");
+	}
+	else
+	{
+		cost=book*150;
+		document.write("<br>No.of Seats Booked : "+book);
+		document.write("<br> Cost of Tickets without discount : "+cost);
+		if(book<3)
+		{
+			discount=0;
+		}
+		else
+		{
+			discount=(cost*10)/100;
+		}
+		document.write("<br>Discount : "+discount);
+		document.write("<br>Total Amount : "+(cost-discount));
+	}
+		
+</script>
+</head>
+</html>
